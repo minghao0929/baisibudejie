@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  01-不思不得姐
+//
+//  Created by Minghao on 16/8/3.
+//  Copyright © 2016年 Minghao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+JMHExtension.h"
+#import "UIBarButtonItem+JMHExtension.h"
+#import "JMHConst.h"
+#import "NSDate+JMHExtension.h"
+
+#ifdef DEBUG
+#define JMHLog(...) NSLog(__VA_ARGS__)
+#else
+#define JMHLog(...)
+#endif
+
+#define JMHScreenW [UIScreen mainScreen].bounds.size.width
+#define JMHScreenH [UIScreen mainScreen].bounds.size.height
+#define JMHLogFunc JMHLog(@"%s",__func__)
+
+#define JMHRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define JMHGlobalBg JMHRGBColor(223, 223, 223)
+#endif /* PrefixHeader_pch */
